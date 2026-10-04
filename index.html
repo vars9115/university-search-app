@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>University Search App</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎓 University Search App</h1>
+        <p>Find universities around the world</p>
+    </header>
+
+    <main>
+
+        <section class="search-box">
+
+            <input
+                type="text"
+                id="universityName"
+                placeholder="Enter university name"
+            >
+
+            <input
+                type="text"
+                id="country"
+                placeholder="Enter country"
+            >
+
+            <button onclick="searchUniversities()">
+                Search
+            </button>
+
+        </section>
+
+        <p id="message"></p>
+
+        <section id="results" class="results"></section>
+
+    </main>
+
+    <footer>
+        <p>University Search App | Web Technology Project</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
